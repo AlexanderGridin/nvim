@@ -32,8 +32,3 @@ vim.g.loaded_ruby_provider = 0
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40")
-
--- Disable virtual_text since it's redundant due to lsp_lines.
-vim.diagnostic.config({
-  virtual_text = false,
-})

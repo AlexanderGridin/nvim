@@ -32,26 +32,7 @@ vim.keymap.set("n", "N", "Nzzzv");
 vim.keymap.set("n", "<C-v>", vim.cmd.vsplit);
 vim.keymap.set("n", "<C-s>", vim.cmd.split);
 
+
 vim.keymap.set("n", "<leader>w", function()
 	vim.api.nvim_command(":Prettier")
 end);
-
--- Trouble plugin
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-  {silent = true, noremap = true}
-)

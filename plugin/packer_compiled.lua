@@ -120,12 +120,16 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  ["import-cost.nvim"] = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/import-cost.nvim",
+    url = "https://github.com/barrett-ruth/import-cost.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -141,12 +145,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lsp_lines.nvim"] = {
-    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0" },
-    loaded = true,
-    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
-    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -184,7 +182,6 @@ _G.packer_plugins = {
     url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
@@ -229,6 +226,16 @@ _G.packer_plugins = {
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggle-lsp-diagnostics.nvim"] = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/toggle-lsp-diagnostics.nvim",
+    url = "https://github.com/WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vgit.nvim"] = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/vgit.nvim",
@@ -247,14 +254,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lsp_lines.nvim
-time([[Config for lsp_lines.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
-time([[Config for lsp_lines.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

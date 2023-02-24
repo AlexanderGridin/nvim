@@ -1,19 +1,14 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 	use "lukas-reineke/indent-blankline.nvim"
-	use 'folke/lsp-colors.nvim'
 	use({
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = function()
-			require("lsp_lines").setup()
-		end,
+		'barrett-ruth/import-cost.nvim',
+		run = 'sh install.sh npm',
 	})
+	use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
+	use 'folke/lsp-colors.nvim'
 	use 'chentoast/marks.nvim'
   use "nvim-lua/plenary.nvim"
 	use {
@@ -24,7 +19,6 @@ return require('packer').startup(function(use)
 	}
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'shaunsingh/nord.nvim'
@@ -33,7 +27,6 @@ return require('packer').startup(function(use)
 	use('rbgrouleff/bclose.vim')
 	use('mihaifm/bufstop')
 	use('tpope/vim-commentary')
-  -- use {'neoclide/coc.nvim', branch = 'master', run = 'npm install --frozen-lockfile'}
 	use ('prettier/vim-prettier', { run = 'npm install --frozen-lockfile --production' })
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
@@ -51,11 +44,6 @@ return require('packer').startup(function(use)
   use {
 	  'glepnir/dashboard-nvim',
 	  event = 'VimEnter',
-	  config = function()
-		  require('dashboard').setup {
-			  -- config
-		  }
-	  end,
 	  requires = {'nvim-tree/nvim-web-devicons'}
   }
   use {
@@ -72,24 +60,19 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},     -- Required
 		  {'hrsh7th/cmp-buffer'},       -- Optional
 		  {'hrsh7th/cmp-path'},         -- Optional
-		  --{'saadparwaiz1/cmp_luasnip'}, -- Optional
 		  {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},             -- Required
-		  --{'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   }
-	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
-	}
+	use "windwp/nvim-autopairs"
 	use('onsails/lspkind.nvim')
-	-- use {
-	-- 	"folke/trouble.nvim",
-	-- 	requires = "nvim-tree/nvim-web-devicons",
-	-- 	config = function()
-	-- 		require("trouble").setup {}
-	-- 	end
-	-- }
+	use {
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	}
+	-- use({
+	-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	-- })
 end)
