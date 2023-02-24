@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescriptreact",
+    "css",
+    "markdown",
+    "ts",
+    "js",
+    "html",
+    "lua",
+    "json",
+    "tsx",
+    "jsx",
+    "vue"
+  ]
+}
