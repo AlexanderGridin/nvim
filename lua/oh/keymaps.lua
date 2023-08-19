@@ -1,3 +1,5 @@
+vim.g.mapleader = ' '
+
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true});
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })

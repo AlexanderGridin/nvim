@@ -9,7 +9,7 @@ local config = {
 
 vim.keymap.set('n', '<leader>ff', function()
 	builtin.find_files(config)
-	end , {})
+end , {})
 
 vim.keymap.set('n', '<leader>fg', function()
 	builtin.live_grep(config)
