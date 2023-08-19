@@ -62,6 +62,5 @@ return require('packer').startup(function(use)
 		}
 	}
 	use("ThePrimeagen/harpoon")
-
 end)
 		-- use 'chentoast/marks.nvim'

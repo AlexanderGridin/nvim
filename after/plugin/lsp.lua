@@ -35,3 +35,6 @@ cmp.setup({
 		['<C-b>'] = cmp_action.luasnip_jump_backward(),
 	}
 })
+
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>cc", vim.lsp.buf.rename)
