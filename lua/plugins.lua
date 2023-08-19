@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 	use "lukas-reineke/indent-blankline.nvim"
+	use "jose-elias-alvarez/typescript.nvim"
 	use({
 		'barrett-ruth/import-cost.nvim',
 		run = 'sh install.sh npm',
@@ -10,6 +11,8 @@ return require('packer').startup(function(use)
 	use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 	use 'folke/lsp-colors.nvim'
 	use 'chentoast/marks.nvim'
+	use 'voldikss/vim-floaterm'
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use "nvim-lua/plenary.nvim"
 	use {
 		'tanvirtin/vgit.nvim',
@@ -17,6 +20,11 @@ return require('packer').startup(function(use)
 			'nvim-lua/plenary.nvim'
 		}
 	}
+	use "f-person/git-blame.nvim"
+	use "airblade/vim-gitgutter"
+	-- use {
+	-- 	'lewis6991/gitsigns.nvim',
+	-- }
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  requires = { {'nvim-lua/plenary.nvim'} }
@@ -44,6 +52,11 @@ return require('packer').startup(function(use)
   use {
 	  'glepnir/dashboard-nvim',
 	  event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+				-- config
+			}
+		end,
 	  requires = {'nvim-tree/nvim-web-devicons'}
   }
   use {

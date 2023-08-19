@@ -1,4 +1,4 @@
 local neogit = require('neogit')
 neogit.setup {}
 
-vim.keymap.set("n", "<leader>g", vim.cmd.Neogit);
+vim.keymap.set("n", "<space>g", vim.cmd.Neogit);
