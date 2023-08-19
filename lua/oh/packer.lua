@@ -62,5 +62,16 @@ return require('packer').startup(function(use)
 		}
 	}
 	use("ThePrimeagen/harpoon")
+	use {
+		'glepnir/dashboard-nvim',
+		event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+				-- config
+			}
+		end,
+		requires = {'nvim-tree/nvim-web-devicons'}
+	}
+	use("onsails/lspkind.nvim")
 end)
 		-- use 'chentoast/marks.nvim'

@@ -25,7 +25,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
 	mapping = {
 		-- `Enter` key to confirm completion
-		['<Tab>'] = cmp.mapping.confirm({select = false}),
+		['<Tab>'] = cmp.mapping.confirm({select = true}),
 
 		-- Ctrl+Space to trigger completion menu
 		['<C-Space>'] = cmp.mapping.complete(),
@@ -33,7 +33,18 @@ cmp.setup({
 		-- Navigate between snippet placeholder
 		['<C-f>'] = cmp_action.luasnip_jump_forward(),
 		['<C-b>'] = cmp_action.luasnip_jump_backward(),
-	}
+	},
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. (strings[1] or "") .. " "
+      kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+      return kind
+    end,
+  },
 })
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
