@@ -2,8 +2,7 @@ vim.g.mapleader = ' '
 
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true});
 
-vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q", vim.cmd.q)
 
 vim.keymap.set("n", "<leader>ps", vim.cmd.PackerSync);
 vim.keymap.set("n", "<leader>so", vim.cmd.so);
@@ -14,8 +13,8 @@ vim.keymap.set("n", "gw", vim.cmd.Bclose);
 
 vim.keymap.set("n", "<leader>m", vim.cmd.Mason);
 
-vim.keymap.set("n", "<leader>e", vim.cmd.BufstopFast);
-vim.keymap.set("n", "<leader>ee", vim.cmd.BufstopPreview);
+-- vim.keymap.set("n", "<leader>e", vim.cmd.BufstopFast);
+-- vim.keymap.set("n", "<leader>ee", vim.cmd.BufstopPreview);
 
 vim.keymap.set("n", ",<space>", vim.cmd.nohlsearch);
 
@@ -31,13 +30,11 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>");
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>");
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>");
 
+vim.keymap.set("n", "<A-l>", ":vertical resize +5<CR>")
+vim.keymap.set("n", "<A-h>", ":vertical resize -5<CR>")
+
 vim.keymap.set("n", "n", "nzzzv");
 vim.keymap.set("n", "N", "Nzzzv");
 
 vim.keymap.set("n", "<C-v>", vim.cmd.vsplit);
 vim.keymap.set("n", "<C-s>", vim.cmd.split);
-
-
-vim.keymap.set("n", "<leader>w", function()
-	vim.api.nvim_command(":Prettier")
-end);

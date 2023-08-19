@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -147,7 +152,12 @@ _G.packer_plugins = {
   ["nord.nvim"] = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
+    url = "https://github.com/gbprod/nord.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -189,6 +199,11 @@ _G.packer_plugins = {
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -198,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hridin/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/home/hridin/.local/share/nvim/site/pack/packer/start/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
   }
 }
 

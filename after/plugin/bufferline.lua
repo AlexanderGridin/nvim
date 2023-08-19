@@ -1,7 +1,4 @@
-local highlights = require("nord").bufferline.highlights({
-    italic = false,
-    bold = false,
-})
+local highlights = require("nord.plugins.bufferline").akinsho()
 
 require("bufferline").setup({
     options = {

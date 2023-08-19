@@ -1,13 +1,13 @@
 require('gitsigns').setup {
-  signs = {
-    add          = { text = '+' },
-    change       = { text = '+' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-    untracked    = { text = '┆' },
-  },
-  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+  -- signs = {
+  --   add          = { text = '+' },
+  --   change       = { text = '~' },
+  --   delete       = { text = '_' },
+  --   topdelete    = { text = '‾' },
+  --   changedelete = { text = '~_' },
+  --   untracked    = { text = '┆' },
+  -- },
+  signcolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
   linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
   word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
@@ -19,7 +19,8 @@ require('gitsigns').setup {
   current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    -- virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    virt_text_pos = 'overlay', -- 'eol' | 'overlay' | 'right_align'
     delay = 1000,
     ignore_whitespace = false,
   },

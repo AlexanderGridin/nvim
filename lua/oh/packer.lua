@@ -8,7 +8,8 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use 'shaunsingh/nord.nvim'
+	-- use 'shaunsingh/nord.nvim'
+	use 'gbprod/nord.nvim'
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('rbgrouleff/bclose.vim')
 	use('mihaifm/bufstop')
@@ -30,7 +31,8 @@ return require('packer').startup(function(use)
 
 	use "windwp/nvim-autopairs"
 	use "lukas-reineke/indent-blankline.nvim"
-	use ('prettier/vim-prettier', { run = 'npm install --frozen-lockfile --production' })
+	use('jose-elias-alvarez/null-ls.nvim')
+	use('MunifTanjim/prettier.nvim')
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -59,18 +61,7 @@ return require('packer').startup(function(use)
 			"sindrets/diffview.nvim",        -- optional
 		}
 	}
+	use("ThePrimeagen/harpoon")
 
 end)
-	-- use({
-		-- 	'barrett-ruth/import-cost.nvim',
-		-- 	run = 'sh install.sh npm',
-		-- })
 		-- use 'chentoast/marks.nvim'
-		-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-		-- use {
-			-- 	'tanvirtin/vgit.nvim',
-			-- 	requires = {
-				-- 		'nvim-lua/plenary.nvim'
-				-- 	}
-				-- }
-					-- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
